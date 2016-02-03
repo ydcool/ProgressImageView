@@ -16,9 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         final ProgressImageView progressImageView = (ProgressImageView) findViewById(R.id.Main_piv);
 
-        AppCompatSeekBar seekBar = (AppCompatSeekBar) findViewById(R.id.Main_seekBar);
-
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        ((AppCompatSeekBar) findViewById(R.id.Main_seekBar)).setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressImageView.setProgress(progress);
@@ -32,7 +30,5 @@ public class MainActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
-
-        Thread.yield();
     }
 }

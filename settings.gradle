@@ -1,1 +1,1 @@
-include ':app', ':progressimageview'
+include ':demo', ':progressimageview'
