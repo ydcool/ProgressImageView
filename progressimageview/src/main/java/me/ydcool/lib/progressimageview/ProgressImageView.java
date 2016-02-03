@@ -19,9 +19,8 @@ import android.widget.ImageView;
 import static android.graphics.Canvas.ALL_SAVE_FLAG;
 
 /**
- * <p/>
  * An iOS style progress image view.
- * <p/>
+ *
  * Created by ydcool on 15/11/30.
  *
  * @author ydcool
