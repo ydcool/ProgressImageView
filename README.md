@@ -1,5 +1,7 @@
 ### Android ProgressImageView
 
+[ ![Download](https://api.bintray.com/packages/ydcool/maven/ProgressImageView/images/download.svg) ](https://bintray.com/ydcool/maven/ProgressImageView/_latestVersion)
+
 An iOS style progress ImageView.
 
 #### Demo
@@ -15,7 +17,7 @@ or scan ![demo](https://api.qrserver.com/v1/create-qr-code/?data=http://7xiilm.c
 gradle :
 
 ```java
-    dependence {
+    dependencies {
         compile 'me.ydcool.lib:progressimageview:latest.integration'
     }
 ```
