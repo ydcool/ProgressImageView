@@ -6,7 +6,11 @@ An iOS style progress ImageView.
 
 ![demo](art/piv.gif)
 
-#### Usage
+Demo apk [download](http://7xiilm.com1.z0.glb.clouddn.com/apk%2FProgressImageViewDemo.apk)
+
+or scan ![demo](https://api.qrserver.com/v1/create-qr-code/?data=http://7xiilm.com1.z0.glb.clouddn.com/apk%2FProgressImageViewDemo.apk&size=120x120)
+
+#### Install
 
 gradle :
 
@@ -15,6 +19,8 @@ gradle :
         compile 'me.ydcool.lib:progressimageview:latest.integration'
     }
 ```
+
+#### Usage
 
 in your layout xml:
 
@@ -30,14 +36,24 @@ in your layout xml:
         app:pi_stroke="6dp"/>
 ```
 
+setter and getter:
+
+```java
+    //setter
+    progressImageView.setProgress(yourProgress);
+    
+    //getter
+    int currentProgress = progressImageView.getProgress();
+```
+
 #### Attributes
 
-| name | description |
+| attr | description |
 | ---- | ----------- |
-| `pi_mask_color` | |
-| `pi_progress` |  |
-| `pi_radius` |  |
-| `pi_stroke` |  |
+| `pi_mask_color` | mask color.argb will looks better. default is `Color.argb(180,0,0,0)` |
+| `pi_progress` | the progress ,default is 0. |
+| `pi_radius` | the radius of inner circle. default is 1/4 of the min side.|
+| `pi_stroke` | stroke for the transparent ring.default is 8dp. |
 
 #### TODO
 
