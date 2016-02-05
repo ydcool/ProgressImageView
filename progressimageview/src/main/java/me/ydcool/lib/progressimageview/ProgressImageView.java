@@ -20,7 +20,7 @@ import static android.graphics.Canvas.ALL_SAVE_FLAG;
 
 /**
  * An iOS style progress image view.
- *
+ * <p/>
  * Created by ydcool on 15/11/30.
  *
  * @author ydcool
@@ -36,12 +36,12 @@ public class ProgressImageView extends ImageView {
     private int mStrokeWidth;
     private float mRadius;
     private float mInterDelta;
+    private int mMaskColor;
 
     private float mMaxMaskRadius;
     private float mMaskAnimDelta;
     private boolean mIsSquare;
     private boolean mMaskAnimRunning;
-//    private boolean mInterAnimRunning;
 
     private long mMediumAnimTime;
 
@@ -74,7 +74,7 @@ public class ProgressImageView extends ImageView {
             this.mStrokeWidth = a.getDimensionPixelOffset(R.styleable.ProgressImageView_pi_stroke, 8);
             this.mRadius = a.getDimensionPixelOffset(R.styleable.ProgressImageView_pi_radius, 0);
             this.mIsSquare = a.getBoolean(R.styleable.ProgressImageView_pi_force_square, false);
-            int mMaskColor = a.getColor(R.styleable.ProgressImageView_pi_mask_color, Color.argb(180, 0, 0, 0));
+            this.mMaskColor = a.getColor(R.styleable.ProgressImageView_pi_mask_color, Color.argb(180, 0, 0, 0));
 
             this.mPaint = new Paint();
             mPaint.setColor(mMaskColor);
@@ -259,6 +259,66 @@ public class ProgressImageView extends ImageView {
             }
         });
         animator.start();
+    }
+
+    /**
+     * get the stroke width.
+     *
+     * @return the stroke width in pixel.
+     */
+    public int getStrokeWidth() {
+        return mStrokeWidth;
+    }
+
+    /**
+     * set the stroke width.default is 8dp.
+     *
+     * @param strokeWidth stroke width in pixel
+     */
+    public void setStrokeWidth(int strokeWidth) {
+        this.mStrokeWidth = strokeWidth;
+        this.mProgressOval = null;
+        invalidate();
+    }
+
+    /**
+     * get the radius of inner progress circle.
+     *
+     * @return the inner circle radius in pixel.
+     */
+    public float getRadius() {
+        return mRadius;
+    }
+
+    /**
+     * set the radius of the inner progress circle.
+     *
+     * @param radius radius in pixel
+     */
+    public void setRadius(float radius) {
+        this.mRadius = radius;
+        this.mProgressOval = null;
+        invalidate();
+    }
+
+    /**
+     * get the color for mask .
+     *
+     * @return the mask color
+     */
+    public int getMaskColor() {
+        return mMaskColor;
+    }
+
+    /**
+     * set the color for mask. Argb will looks better. Default is Color.argb(180,0,0,0)
+     *
+     * @param maskColor the color value.
+     */
+    public void setMaskColor(int maskColor) {
+        mMaskColor = maskColor;
+        mPaint.setColor(mMaskColor);
+        invalidate();
     }
 
     /**

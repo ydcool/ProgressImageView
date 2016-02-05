@@ -18,10 +18,10 @@
         android:layout_height="200dp"
         android:layout_centerInParent="true"
         android:src="@mipmap/ic_launcher"
-        app:pi_mask_color="#CC233333"
+        app:pi_mask_color="@color/demo_mask_color"
         app:pi_progress="0"
-        app:pi_radius="60dp"
-        app:pi_stroke="6dp"/>
+        app:pi_radius="@dimen/demo_radius"
+        app:pi_stroke="@dimen/demo_stroke"/>
 
     <android.support.v7.widget.AppCompatSeekBar
         android:id="@+id/Main_seekBar"
