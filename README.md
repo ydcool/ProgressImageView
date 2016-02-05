@@ -1,6 +1,7 @@
 ### Android ProgressImageView
 
 [ ![Download](https://api.bintray.com/packages/ydcool/maven/ProgressImageView/images/download.svg) ](https://bintray.com/ydcool/maven/ProgressImageView/_latestVersion)
+[![Build Status](https://travis-ci.org/Ydcool/ProgressImageView.svg?branch=master)](https://travis-ci.org/Ydcool/ProgressImageView)
 
 An iOS style progress ImageView.
 
