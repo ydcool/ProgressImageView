@@ -20,7 +20,7 @@ import static android.graphics.Canvas.ALL_SAVE_FLAG;
 
 /**
  * An iOS style progress image view.
- * <p/>
+ *
  * Created by ydcool on 15/11/30.
  *
  * @author ydcool
