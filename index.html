@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Progressimageview by Ydcool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Progressimageview</h1>
+      <h2 class="project-tagline">An iOS style progress ImageView for Android.</h2>
+      <a href="https://github.com/Ydcool/ProgressImageView" class="btn">View on GitHub</a>
+      <a href="https://github.com/Ydcool/ProgressImageView/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Ydcool/ProgressImageView/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="android-progressimageview" class="anchor" href="#android-progressimageview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android ProgressImageView</h3>
+
+<p><a href="https://bintray.com/ydcool/maven/ProgressImageView/_latestVersion"> <img src="https://api.bintray.com/packages/ydcool/maven/ProgressImageView/images/download.svg" alt="Download"> </a>
+<a href="https://travis-ci.org/Ydcool/ProgressImageView"><img src="https://travis-ci.org/Ydcool/ProgressImageView.svg?branch=master" alt="Build Status"></a></p>
+
+<p>An iOS style progress ImageView.</p>
+
+<h4>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h4>
+
+<p><img src="https://raw.githubusercontent.com/Ydcool/QrModule/master/art/piv.gif" alt="demo"></p>
+
+<p>Demo apk <a href="http://7xiilm.com1.z0.glb.clouddn.com/apk%2FProgressImageViewDemo.apk">download</a></p>
+
+<p>or scan <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://7xiilm.com1.z0.glb.clouddn.com/apk%2FProgressImageViewDemo.apk&amp;size=120x120" alt="demo"></p>
+
+<h4>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h4>
+
+<p>gradle :</p>
+
+<div class="highlight highlight-source-java"><pre>    dependencies {
+        compile <span class="pl-s"><span class="pl-pds">'</span>me.ydcool.lib:progressimageview:latest.integration<span class="pl-pds">'</span></span>
+    }</pre></div>
+
+<h4>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h4>
+
+<p>in your layout xml:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">me</span>.ydcool.lib.progressimageview.ProgressImageView
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/Main_piv<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>200dp<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>200dp<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>@mipmap/ic_launcher<span class="pl-pds">"</span></span>
+        <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">pi_mask_color</span>=<span class="pl-s"><span class="pl-pds">"</span>#CC233333<span class="pl-pds">"</span></span>
+        <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">pi_progress</span>=<span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>
+        <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">pi_radius</span>=<span class="pl-s"><span class="pl-pds">"</span>60dp<span class="pl-pds">"</span></span>
+        <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">pi_stroke</span>=<span class="pl-s"><span class="pl-pds">"</span>6dp<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<p>setter and getter:</p>
+
+<div class="highlight highlight-source-java"><pre>    <span class="pl-c">//setter</span>
+    progressImageView<span class="pl-k">.</span>setProgress(yourProgress);
+
+    <span class="pl-c">//getter</span>
+    <span class="pl-k">int</span> currentProgress <span class="pl-k">=</span> progressImageView<span class="pl-k">.</span>getProgress();</pre></div>
+
+<h4>
+<a id="attributes" class="anchor" href="#attributes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h4>
+
+<table>
+<thead>
+<tr>
+<th>attr</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pi_mask_color</code></td>
+<td>mask color.argb will looks better. default is <code>Color.argb(180,0,0,0)</code>
+</td>
+</tr>
+<tr>
+<td><code>pi_progress</code></td>
+<td>the progress ,default is 0.</td>
+</tr>
+<tr>
+<td><code>pi_radius</code></td>
+<td>the radius of inner circle. default is 1/4 of the min side.</td>
+</tr>
+<tr>
+<td><code>pi_stroke</code></td>
+<td>stroke for the transparent ring.default is 8dp.</td>
+</tr>
+</tbody>
+</table>
+
+<h4>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TODO</h4>
+
+<ul>
+<li>support for pause and resume</li>
+</ul>
+
+<h4>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h4>
+
+<p><a href="LICENSE">Apache License 2.0</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Ydcool/ProgressImageView">Progressimageview</a> is maintained by <a href="https://github.com/Ydcool">Ydcool</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
