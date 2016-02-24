@@ -4,6 +4,15 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
+    signingConfigs {
+        release {
+            storeFile file("key.jks")
+            storePassword "123456"
+            keyAlias "demo"
+            keyPassword "123456"
+        }
+    }
+
     defaultConfig {
         applicationId "me.ydcool.progressimageview"
         minSdkVersion 11
@@ -14,14 +23,16 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile project (':progressimageview')
+    compile project(':progressimageview')
     compile 'com.android.support:appcompat-v7:23.1.1'
 }
