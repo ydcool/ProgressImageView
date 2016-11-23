@@ -9,9 +9,9 @@ An iOS style progress ImageView.
 
 ![demo](art/piv.gif)
 
-Demo apk [download](http://7xiilm.com1.z0.glb.clouddn.com/apk%2FProgressImageViewDemo.apk)
+Demo apk [download](http://cdn.ydcool.me/apk%2FProgressImageViewDemo.apk)
 
-or scan ![demo](https://api.qrserver.com/v1/create-qr-code/?data=http://7xiilm.com1.z0.glb.clouddn.com/apk%2FProgressImageViewDemo.apk&size=120x120)
+or scan ![demo](https://api.qrserver.com/v1/create-qr-code/?data=http://cdn.ydcool.me/apk%2FProgressImageViewDemo.apk&size=120x120)
 
 #### Install
 
