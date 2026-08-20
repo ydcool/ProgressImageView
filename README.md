@@ -1,3 +1,5 @@
+
+
 ### Android ProgressImageView
 
 [ ![Download](https://api.bintray.com/packages/ydcool/maven/ProgressImageView/images/download.svg) ](https://bintray.com/ydcool/maven/ProgressImageView/_latestVersion)
@@ -57,6 +59,7 @@ setter and getter:
 | `pi_progress` | the progress ,default is 0. |
 | `pi_radius` | the radius of inner circle. default is 1/4 of the min side.|
 | `pi_stroke` | stroke for the transparent ring.default is 8dp. |
+| `pi_force_square` | force the view to be a square. default is false. |
 
 #### TODO
 
